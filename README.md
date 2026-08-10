@@ -1,6 +1,6 @@
 ### Haris Zafar Bhatti
 
-I build the data layer and the AI on top — ETL pipelines, warehouses, and dashboards, plus the automation and agents that run on them.
+**I build the data layer and the AI on top** — ETL pipelines, warehouses, and dashboards, plus the automation and agents that run on them.
 
 Most AI problems turn out to be data problems. Most automation projects fail because nobody modelled the data underneath. I do both halves.
 
@@ -54,11 +54,11 @@ flowchart LR
 
 #### Stack
 
-Data — Python · SQL · BigQuery · dbt · Looker Studio · Postgres · Supabase
+**Data** — Python · SQL · BigQuery · dbt · Looker Studio · Postgres · Supabase
 
-AI — LangChain · OpenAI · Gemini · Claude · Groq · RAG · Langfuse
+**AI** — LangChain · OpenAI · Gemini · Claude · Groq · RAG · Langfuse
 
-Platform — n8n · REST · webhooks · OAuth2 · Docker · GitHub Actions · AWS · GCP
+**Platform** — n8n · REST · webhooks · OAuth2 · Docker · GitHub Actions · AWS · GCP
 
 #### Elsewhere
 
