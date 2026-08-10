@@ -1,16 +1,31 @@
-## Hi there 👋
+### Haris Zafar Bhatti
 
-<!--
-**alfassaad/alfassaad** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I build the data layer and the AI on top — ETL pipelines, warehouses, and dashboards, plus the automation and agents that run on them.
 
-Here are some ideas to get you started:
+Most AI problems turn out to be data problems. Most automation projects fail because nobody modelled the data underneath. I do both halves.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Currently building — repos land here as each one ships
+
+- n8n execution-metrics pipeline into BigQuery, behind a public Looker Studio ops dashboard
+
+- dbt transformation layer with tests, docs, and CI
+
+- Contribution-margin model, CM1 through CM4
+
+- Server-side GTM and Meta CAPI with event_id deduplication and consent mode
+
+- Langfuse eval harness with a versioned eval set and LLM-as-judge regression gates
+
+Stack
+
+Python · SQL · BigQuery · dbt · Looker Studio · Postgres · Supabase
+
+LangChain · OpenAI · Gemini · Claude · Groq · RAG · Langfuse
+
+n8n · REST · webhooks · OAuth2 · Docker · GitHub Actions · AWS · GCP
+
+Elsewhere
+
+Portfolio — hariszafar.lovable.app
+
+LinkedIn — linkedin.com/in/hariszb
