@@ -10,17 +10,31 @@ Currently the sole engineer on a Doha commerce operation: ~1,400 workflow execut
 
 flowchart LR
 
-  A["Sources<br/>Shopify · Ads · Sheets · APIs"] --> B["Ingestion<br/>n8n · Python"]
+  A[Shopify · Ads · Sheets · APIs]
 
-  B --> C[("BigQuery")]
+  subgraph DL[The data layer]
 
-  C --> D["dbt<br/>tests · docs · CI"]
+    B[Ingestion · n8n · Python] --> C[(BigQuery)] --> D[dbt · tests · docs · CI]
 
-  D --> E["Dashboards & BI<br/>Looker Studio"]
+  end
 
-  D --> F["Agents & RAG<br/>LangChain"]
+  subgraph AI[The AI on top]
 
-  F --> G["Evals & tracing<br/>Langfuse"]
+    E[Looker Studio · BI]
+
+    F[Agents · RAG · LangChain]
+
+    G[Langfuse · evals]
+
+  end
+
+  A --> B
+
+  D --> E
+
+  D --> F
+
+  F --> G
 
   G -.->|regression gates| F
 
