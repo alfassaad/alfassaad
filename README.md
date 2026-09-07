@@ -6,51 +6,36 @@ Most AI problems turn out to be data problems. Most automation projects fail bec
 
 Currently the sole engineer on a Doha commerce operation: ~1,400 workflow executions a week at under one failure a fortnight, order handling down from 11 minutes to 40 seconds, and a customer-facing assistant resolving 61% of conversations with no human handoff.
 
+Current architecture — everything below is running except the Looker Studio ops dashboard.
+
 ```mermaid
-
 flowchart LR
-
   A[Shopify · Ads · Sheets · APIs]
-
   subgraph DL[The data layer]
-
     B[Ingestion · n8n · Python] --> C[(BigQuery)] --> D[dbt · tests · docs · CI]
-
   end
-
   subgraph AI[The AI on top]
-
-    E[Looker Studio · BI]
-
+    E[Looker Studio · BI — not live yet]
     F[Agents · RAG · LangChain]
-
     G[Langfuse · evals]
-
   end
-
   A --> B
-
   D --> E
-
   D --> F
-
   F --> G
-
   G -.->|regression gates| F
-
 ```
+
+#### Shipped
+
+- dbt transformation layer on BigQuery with tests, docs, and CI
+- Langfuse eval harness with a versioned eval set and LLM-as-judge regression gates
 
 #### Building next
 
 - n8n execution metrics into BigQuery, behind a public Looker Studio ops dashboard
-
-- dbt transformation layer with tests, docs, and CI
-
 - Contribution margin model, CM1 through CM4
-
 - Server-side GTM and Meta CAPI with event_id deduplication and consent mode
-
-- Langfuse eval harness with a versioned eval set and LLM-as-judge regression gates
 
 #### Stack
 
