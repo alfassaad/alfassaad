@@ -55,4 +55,4 @@ flowchart LR
 
 #### Elsewhere
 
-[Portfolio](https://hariszafar.lovable.app) · [LinkedIn](https://linkedin.com/in/hariszb)
+[LinkedIn](https://linkedin.com/in/hariszb)
