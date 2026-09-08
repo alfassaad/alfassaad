@@ -1,29 +1,35 @@
 ### Haris Zafar Bhatti
 
-**I build the data layer and the AI on top** — ETL pipelines, warehouses, and dashboards, plus the automation and agents that run on them.
+**Eight years running e-commerce operations. Now I automate them.**
 
-Most AI problems turn out to be data problems. Most automation projects fail because nobody modelled the data underneath. I do both halves.
+Inventory floors, storefronts, ad accounts, supplier calls — I did that work before I built systems to do it. So when I automate a procurement flow or a support assistant, I already know where it breaks, because I used to be the person it broke on.
 
-Currently the sole engineer on a Doha commerce operation: ~1,400 workflow executions a week at under one failure a fortnight, order handling down from 11 minutes to 40 seconds, and a customer-facing assistant resolving 61% of conversations with no human handoff.
+Currently the sole engineer on the automation, AI, and data stack at a Doha commerce operation: ~1,400 workflow executions a week at under one failure a fortnight, order handling down from 11 minutes to 40 seconds, weekly reporting from four hours to under fifteen, and a customer-facing assistant resolving 61% of conversations with no human handoff.
+
+The hard part isn't building it. It's building it so it doesn't quietly break.
 
 Current architecture — everything below is running except the Looker Studio ops dashboard.
 
 ```mermaid
 flowchart LR
-  A[Shopify · Ads · Sheets · APIs]
-  subgraph DL[The data layer]
-    B[Ingestion · n8n · Python] --> C[(BigQuery)] --> D[dbt · tests · docs · CI]
+  A[Shopify · Klaviyo · Suppliers · APIs]
+  subgraph OPS[What gets automated]
+    B[Orders · procurement · support · lifecycle]
+  end
+  subgraph DL[The data layer underneath]
+    C[Ingestion · n8n · Python] --> D[(BigQuery)] --> E[dbt · tests · docs · CI]
   end
   subgraph AI[The AI on top]
-    E[Looker Studio · BI — not live yet]
-    F[Agents · RAG · LangChain]
-    G[Langfuse · evals]
+    F[Looker Studio · BI — not live yet]
+    G[Agents · RAG · LangChain]
+    H[Langfuse · evals]
   end
   A --> B
-  D --> E
-  D --> F
-  F --> G
-  G -.->|regression gates| F
+  B --> C
+  E --> F
+  E --> G
+  G --> H
+  H -.->|regression gates| G
 ```
 
 #### Shipped
@@ -39,11 +45,13 @@ flowchart LR
 
 #### Stack
 
+**Commerce** — Shopify · Klaviyo · WhatsApp Business API · Amazon Seller Central
+
+**Platform** — n8n · REST · webhooks · OAuth2 · Docker · GitHub Actions · AWS · GCP
+
 **Data** — Python · SQL · BigQuery · dbt · Looker Studio · Postgres · Supabase
 
 **AI** — LangChain · OpenAI · Gemini · Claude · Groq · RAG · Langfuse
-
-**Platform** — n8n · REST · webhooks · OAuth2 · Docker · GitHub Actions · AWS · GCP
 
 #### Elsewhere
 
